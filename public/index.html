@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReparaYa | Acceso</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <section class="welcome" aria-label="Presentación de ReparaYa">
+      <div class="brand"><span class="brand-icon">🔧</span> Repara<span>Ya</span></div>
+      <h1>Tu solución de reparaciones comienza aquí.</h1>
+      <p>Regístrate o inicia sesión para acceder a ReparaYa, una plataforma que conecta personas con servicios de reparación.</p>
+      <div class="badge">Proyecto SENA · Servicios web</div>
+    </section>
+    <section class="card" aria-label="Registro y autenticación">
+      <div class="tabs" role="tablist" aria-label="Seleccionar formulario">
+        <button type="button" class="tab active" id="tab-login" role="tab" aria-selected="true" aria-controls="panel-login">Iniciar sesión</button>
+        <button type="button" class="tab" id="tab-register" role="tab" aria-selected="false" aria-controls="panel-register">Registrarme</button>
+      </div>
+      <div id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+        <h2>¡Qué bueno verte!</h2>
+        <p class="subtext">Ingresa tus datos para continuar.</p>
+        <form id="login-form">
+          <label for="login-user">Usuario</label>
+          <input id="login-user" name="usuario" type="text" autocomplete="username" placeholder="Tu usuario" required>
+          <label for="login-password">Contraseña</label>
+          <input id="login-password" name="clave" type="password" autocomplete="current-password" placeholder="Tu contraseña" required>
+          <button class="primary" type="submit">Ingresar</button>
+        </form>
+        <p id="login-message" class="message" role="status" aria-live="polite"></p>
+      </div>
+      <div id="panel-register" role="tabpanel" aria-labelledby="tab-register" hidden>
+        <h2>Crea tu cuenta</h2>
+        <p class="subtext">Comienza con un usuario y una contraseña.</p>
+        <form id="register-form">
+          <label for="register-user">Usuario</label>
+          <input id="register-user" name="usuario" type="text" autocomplete="username" minlength="3" maxlength="30" pattern="[a-zA-Z0-9_]+" placeholder="Ej.: andres_uribe" required>
+          <label for="register-password">Contraseña</label>
+          <input id="register-password" name="clave" type="password" autocomplete="new-password" minlength="8" maxlength="72" placeholder="Mínimo 8 caracteres" required>
+          <button class="primary" type="submit">Crear cuenta</button>
+        </form>
+        <p id="register-message" class="message" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

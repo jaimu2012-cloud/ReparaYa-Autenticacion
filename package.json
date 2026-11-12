@@ -1,0 +1,9 @@
+{
+  "name": "reparaya-autenticacion",
+  "version": "1.0.0",
+  "description": "Evidencia SENA GA7-220501096-AA5-EV01 - Registro y autenticación de usuarios",
+  "main": "server.js",
+  "scripts": {"start": "node server.js", "dev": "node --watch server.js"},
+  "dependencies": {"bcryptjs": "^2.4.3", "express": "^4.21.2"},
+  "engines": {"node": ">=18"}
+}
